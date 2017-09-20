@@ -1,0 +1,157 @@
+@size : 37.5rem;
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #f8f8f8 inset;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus {
+    -webkit-box-shadow: 0 0 0 1000px #f8f8f8 inset;
+}
+
+.btn_look {
+    position: absolute;
+    right: 0;
+    width: 19/@size;
+    height: 8/@size;
+    border: 10/@size solid transparent;
+    background-image: url("../images/icon_paw_show.png");
+    background-position: center;
+    background-size: 19/@size auto;
+    background-repeat: no-repeat;
+    &.look_hide {
+        background-image: url("../images/icon_paw_hide.png");
+    }
+}
+
+.forget_password {
+    margin-top: 12.5/@size;
+    margin-bottom: 20.5/@size;
+    text-align: right;
+    height: 13/@size;
+    a {
+        font-size: 12/@size;
+        color: #999;
+    }
+    .login_error {
+        display: none;
+        float: left;
+        font-size: 13/@size;
+        color: #fe443b;
+    }
+}
+
+.active {
+    display: block !important;
+}
+
+.btn_next {
+    display: block;
+    width: 100%;
+    padding: 10/@size;
+    text-align: center;
+    text-align: center;
+    color: #ccc;
+    border: 1px solid #F84A73;
+    border-radius: 2/@size;
+}
+
+.btn_next_ok {
+    color: #fff;
+    padding: 10/@size;
+    background-image: linear-gradient(-180deg, #F84A73 0%, #FF3C4C 100%);
+    color: #fff;
+    border-radius: 2/@size;
+}
+
+.login_container {
+    margin: 0 auto;
+    width: 78.93%;
+    div {
+        position: relative;
+        margin-top: 25/@size;
+    }
+    input {
+        padding: 12.5/@size 4/@size;
+        width: 100%;
+        border: none;
+        color: #333333;
+        font-size: 14/@size;
+        background-color: transparent;
+        border-bottom: 1px solid #e6e6e6;
+        &::-webkit-input-placeholder {
+            color: #cccccc;
+            font-size: inherit;
+        }
+        .username:focus>.btn_delete {
+            display: inline-block;
+        }
+    }
+    .errorMsg {
+        color: #f00;
+    }
+    .btn_next {
+        letter-spacing: 8.5/@size;
+    }
+    .btn_next1 {
+        letter-spacing: 2/@size;
+    }
+    .btn_look {
+        top: 21/@size
+    }
+    .btn_submit {
+        margin-top: 27/@size;
+    }
+    .btn_register {
+        margin-top: 15/@size;
+        color: #fe403b;
+    }
+    .show_password {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 28/@size .5rem;
+        color: #cccccc;
+        font-size: 13/@size;
+    }
+    .btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 90%;
+        margin: auto;
+    }
+    button {
+        border: none;
+    }
+}
+.cleari{
+        width: 13/@size;
+        height: 13/@size;
+        background: url("../images/icon_delete.png") center/contain no-repeat;
+}
+.logo {
+    margin-top: 36.5/@size;
+    margin-bottom: 28/@size;
+    text-align: center;
+    span {
+        color: #FE403B;
+    }
+    img {
+        width: 54.66%;
+    }
+}
+
+.base_header {
+    height: 40/@size;
+    line-height: 40/@size;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+}

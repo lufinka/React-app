@@ -1,0 +1,145 @@
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #f8f8f8 inset;
+}
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus {
+  -webkit-box-shadow: 0 0 0 1000px #f8f8f8 inset;
+}
+.btn_look {
+  position: absolute;
+  right: 0;
+  width: 0.50666667rem;
+  height: 0.21333333rem;
+  border: 0.26666667rem solid transparent;
+  background-image: url("../images/icon_paw_show.png");
+  background-position: center;
+  background-size: 0.50666667rem auto;
+  background-repeat: no-repeat;
+}
+.btn_look.look_hide {
+  background-image: url("../images/icon_paw_hide.png");
+}
+.forget_password {
+  margin-top: 0.33333333rem;
+  margin-bottom: 0.54666667rem;
+  text-align: right;
+  height: 0.34666667rem;
+}
+.forget_password a {
+  font-size: 0.32rem;
+  color: #999;
+}
+.forget_password .login_error {
+  display: none;
+  float: left;
+  font-size: 0.34666667rem;
+  color: #fe443b;
+}
+.active {
+  display: block !important;
+}
+.btn_next {
+  display: block;
+  width: 100%;
+  padding: 0.26666667rem;
+  text-align: center;
+  color: #ccc;
+  border: 1px solid #F84A73;
+  border-radius: 0.05333333rem;
+}
+.btn_next_ok {
+  padding: 0.26666667rem;
+  background-image: linear-gradient(-180deg, #F84A73 0%, #FF3C4C 100%);
+  color: #fff;
+  border-radius: 0.05333333rem;
+}
+.login_container {
+  margin: 0 auto;
+  width: 78.93%;
+}
+.login_container div {
+  position: relative;
+  margin-top: 0.66666667rem;
+}
+.login_container input {
+  padding: 0.33333333rem 0.10666667rem;
+  width: 100%;
+  border: none;
+  color: #333333;
+  font-size: 0.37333333rem;
+  background-color: transparent;
+  border-bottom: 1px solid #e6e6e6;
+}
+.login_container input::-webkit-input-placeholder {
+  color: #cccccc;
+  font-size: inherit;
+}
+.login_container input .username:focus > .btn_delete {
+  display: inline-block;
+}
+.login_container .errorMsg {
+  color: #f00;
+}
+.login_container .btn_next {
+  letter-spacing: 0.22666667rem;
+}
+.login_container .btn_next1 {
+  letter-spacing: 0.05333333rem;
+}
+.login_container .btn_look {
+  top: 0.56rem;
+}
+.login_container .btn_submit {
+  margin-top: 0.72rem;
+}
+.login_container .btn_register {
+  margin-top: 0.4rem;
+  color: #fe403b;
+}
+.login_container .show_password {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0.74666667rem 0.5rem;
+  color: #cccccc;
+  font-size: 0.34666667rem;
+}
+.login_container .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 90%;
+  margin: auto;
+}
+.login_container button {
+  border: none;
+}
+.cleari {
+  width: 0.34666667rem;
+  height: 0.34666667rem;
+  background: url("../images/icon_delete.png") center / contain no-repeat;
+}
+.logo {
+  margin-top: 0.97333333rem;
+  margin-bottom: 0.74666667rem;
+  text-align: center;
+}
+.logo span {
+  color: #FE403B;
+}
+.logo img {
+  width: 54.66%;
+}
+.base_header {
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
