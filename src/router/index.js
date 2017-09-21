@@ -9,12 +9,14 @@ import {
 
 import App from "../App";
 import NotFoundPage from "../pages/NotFound";
+import classify from "../pages/classify";
 
 const router = (
     <Router>
         <div>
             <Switch>
                 <Route path="/" exact component={App}/>
+                <Route path="/classify" exact component={classify}/>
                 <Route component={NotFoundPage}/>
             </Switch>
         </div>
