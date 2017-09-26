@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './images/logo.png';
 import './style/login.css';
 import './style/normalize.css';
-import 'antd-mobile/lib/tab-bar/style/index.css';
 import { Button ,NavBar, Icon } from 'antd-mobile';
 import axios from 'axios'
 import {

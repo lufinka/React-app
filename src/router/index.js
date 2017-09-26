@@ -16,7 +16,7 @@ const router = (
         <div>
             <Switch>
                 <Route path="/" exact component={App}/>
-                <Route path="/classify" exact component={classify}/>
+                <Route path="/classify" component={classify}/>
                 <Route component={NotFoundPage}/>
             </Switch>
         </div>

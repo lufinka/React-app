@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>药品分类</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="//s.maiyaole.com/common/FFF/zepto/v0.2/style/base.css" />
+<link rel="stylesheet" href="styles/classify.css" />
+
+<body>
+    <div class="container wrapper">
+        <header class="header">
+            <div class="search_contaienr">
+                <a href="/search.html?redirecturl=%2Fclassify.html"><input id="search_input" class="search_input" type="text" placeholder="药品名/拼音缩写/厂家" readonly="false"></a>
+            </div>
+        </header>
+        <div class="classify">
+        </div>
+        <!-- 底部菜单 -->
+        <footer class="footer">
+            <ul class="bot_menu_ul">
+                <li>
+                    <a href="index.html" title="">
+                        <span class="nav_ico nav_ico1"></span>
+                        <span class="world">首页</span>
+                    </a>
+                </li>
+                <li class="on">
+                    <a href="classify.html" title="">
+                        <span class="nav_ico nav_ico2"></span>
+                        <span class="world">分类</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="shopcar.html" title="">
+                        <span class="shop_car nav_ico nav_ico3">
+                <i class="shop_count">3</i>
+              </span>
+                        <span class="world">购物车</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="user_center.html" title="">
+                        <span class="nav_ico nav_ico4"></span>
+                        <span class="world">我</span>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <script type="text/html" id="tpl_category">
+        {{if data && data.length }}
+            <div class="classify-tab ui_verscrollpl">
+                <div class="cont">
+                   <i class="strip" style="{{data | top:''}}"></i>
+                    <ul>
+                       {{each data as value i}}
+                       {{if (i == 0 && value.categoryCode == '') || value.categoryCode == categoryId}}
+                        <li class="active">{{value.categoryName}}</li>
+                        {{else}}
+                        <li>{{value.categoryName}}</li>
+                       {{/if}}
+                     {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <div class="classify-right">
+            {{each data as value i}}
+            <div class="classify-content animated ui_verscrollpl {{i | avtive:''}}">
+                <div class="classify-wrapper">
+                    {{if value.activityPic}}
+                    <div class="add-pic" data-activityUrl="{{value.activityUrl}}" data-activityUrlApp="{{value.activityUrlApp}}">
+                        <a><img src="{{value.activityPic}}" alt=""></a>
+                    </div>
+                    {{/if}}
+                    {{if value.showCard == 0 && value.cardCategory && value.cardCategory.length}}
+                    {{if value.cardCategory.length > 6}}
+                    <div class="category" style="padding-bottom:0.4rem;">
+                    {{else}}
+                    <div class="category">
+                    {{/if}}
+                        <ul>
+                           {{each value.cardCategory as item n}}
+                           {{if n == 0}}
+                            <li class="active">
+                                <a href="#{{item.categoryCode}}">{{item.categoryName}}</a>
+                            </li>
+                            {{else}}
+                            <li>
+                                <a href="#{{item.categoryCode}}">{{item.categoryName}}</a>
+                            </li>
+                       {{/if}}
+                       {{/each}}
+                        </ul>
+                        {{if value.cardCategory && value.cardCategory.length > 6}}
+                        <div class="toggle-btn">
+                            <i></i>
+                        </div>
+                        {{/if}}
+                    </div>
+                    {{/if}}
+                    <div class="category-wrapper">
+                    {{each value.secondCategory as item n}}
+                        <dl name="{{item.categoryCode}}" id="{{item.categoryCode}}">
+                            <dt>{{item.categoryName}}</dt>
+                            <div class="cont">
+                            {{each item.thirdCategory as val m}}
+                            <dd>
+                               <a href="/result_product.html?product2ndLMCode={{val.categoryCode}}">
+                                <img src="{{val.activityPic}}" alt="">
+                                <p>{{val.categoryName}}</p>
+                                </a>
+                            </dd>
+                            {{/each}}
+                            </div>
+                        </dl>
+                    {{/each}}
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+            </div>
+        {{/if}}
+    </script>
+    <script src="//s.maiyaole.com/common/FFF/zepto/v0.2/FFF.fc.template.min.js">
+    </script>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/classify.js"></script>
+</body>
+
+</html>

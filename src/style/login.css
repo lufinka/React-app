@@ -45,6 +45,7 @@ textarea:focus {
   padding: 10px;
   text-align: center;
   color: #ccc;
+  font-size: 18px;
   border: 1px solid #F84A73;
   border-radius: 0.05333333rem;
 }
@@ -82,7 +83,7 @@ textarea:focus {
   color: #f00;
 }
 .login_container .btn_next {
-  letter-spacing: 0.22666667rem;
+  letter-spacing: 8px;
 }
 .login_container .btn_next1 {
   letter-spacing: 0.05333333rem;

@@ -230,7 +230,7 @@ module.exports = {
                                     plugins: () => [
                                         pxtorem({
                                             rootValue: 50,
-                                            propWhiteList: ['line-height','font-size','padding','width','height','margin-top','margin-left','margin-bottom','margin-right','margin','top','right','bottom','left'],
+                                            propWhiteList: ['background-position','padding-left','max-height','background-size','line-height','font-size','padding','width','height','margin-top','margin-left','margin-bottom','margin-right','margin','top','right','bottom','left'],
                                         }),
                                         autoprefixer({
                                             browsers: ['last 2 versions', 'Firefox ESR', '> 1%', 'ie >= 8', 'iOS >= 8', 'Android >= 4'],

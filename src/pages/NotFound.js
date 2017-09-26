@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-export default class SportContainer extends Component {
+export default class fzf extends Component {
   render() {
     return (
       <div className='not_found'>

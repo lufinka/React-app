@@ -1,0 +1,204 @@
+@charset "utf-8";
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0 auto;
+  padding: 0px;
+  font-size: 12px;
+  font-family: Helvetica;
+}
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+form,
+fieldset,
+legend,
+input,
+select,
+textarea,
+button,
+th,
+td,
+menu,
+article,
+pre,
+xmp,
+plaintext,
+listing {
+  margin: 0;
+  padding: 0;
+}
+pre,
+xmp,
+plaintext,
+listing {
+  white-space: normal;
+}
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+select,
+time {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+select,
+button,
+label {
+  font-size: 100%;
+  font-weight: 100;
+  vertical-align: middle;
+}
+ul,
+dl,
+ol {
+  list-style: none;
+}
+i,
+em {
+  font-style: normal;
+}
+b {
+  font-weight: normal;
+}
+img,
+fieldset,
+input[type="submit"] {
+  border: none;
+}
+input {
+  outline: none;
+  background: transparent;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button {
+  cursor: pointer;
+  border: none;
+}
+textarea {
+  word-wrap: break-word;
+  resize: none;
+}
+/* 去除IE下拉菜单箭头 */
+select::-ms-expand {
+  display: none;
+}
+/* 去除IE下radio、checkbox默认样式 */
+::-ms-check {
+  display: none;
+}
+/* 去除输入框、文本域默认边框和IOS4下的内阴影 */
+input,
+textarea,
+select {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+}
+/* 设置Gecko内核下输入框属性placeholder中值的文件颜色 */
+input:-moz-placeholder {
+  color: #C4C4C4;
+}
+/* 设置webkit内核下输入框属性placeholder中值的文件颜色 */
+::-webkit-input-placeholder {
+  color: #C4C4C4;
+}
+/* 设置webkit内核下文字大小不小于12px */
+html,
+body {
+  -webkit-text-size-adjust: none;
+  /*height:100%;*/
+}
+/* 禁止长按链接、按钮、输入框出现系统默认弹框菜单 */
+a,
+button,
+input {
+  -webkit-touch-callout: none;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  -webkit-touch-callout: none;
+  color: #666;
+}
+* {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+  font-family: Helvetica;
+}
+.ui-table {
+  display: table;
+}
+.ui-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+html.debug_class #__vconsole {
+  display: block;
+}
+html #__vconsole {
+  display: none;
+}
+.message {
+  display: none;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  right: 0;
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.51);
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.15625rem;
+  padding: 0.5rem;
+  z-index: 999;
+}
+.message.active {
+  display: block;
+}
+.loading {
+  display: none;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  right: 0;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.51);
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.15625rem;
+  padding: 0.5rem;
+  z-index: 999;
+}
+.loading.active {
+  display: block;
+}

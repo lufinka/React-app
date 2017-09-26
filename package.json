@@ -98,7 +98,8 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "postcss-pxtorem": "^3.3.1"
+    "postcss-pxtorem": "^3.3.1",
+    "svg-sprite-loader": "^0.3.1"
   },
   "proxy": "http://m.yaoex.com/"
 }
