@@ -1605,3 +1605,6 @@ input[type="number"] {
 .Boot_download .go_now img {
   width: 100%;
 }
+.am-refresh-control-deactive .am-refresh-control-ptr-icon {
+  display: block;
+}

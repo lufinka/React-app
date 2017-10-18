@@ -1,44 +1,5 @@
 @import 'common';
-.transition(@arg){
-    -webkit-transition:@arg;
-    transition:@arg;
-}
-.transition(@arg;@prefix)when(@prefix=true){
-    -webkit-transition:e("-webkit-@{arg}");
-    transition:@arg;
-}
-.clearfix(){
-    &:after{
-        content:"";
-        display:table;
-        clear:both;
-    }
-}
-.radius(@x:5px){
-    -webkit-border-radius: @x;
-    border-radius: @x;
-}
-.ellipsis(){
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow:ellipsis;
-}
-* {
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -moz-user-select: none;
-    /* Firefox */
-    -ms-user-select: none;
-    /* Internet Explorer */
-    -ktml-user-select: none;
-    /* KHTML浏览器（比如：Konqueror） */
-    -webkit-user-select: none;
-    /* Chrome,Safari,and Opera */
-    -webkit-touch-callout: none;
-    /* Disable Android and IOS callout */
-}
+
 .nav_ico3 {
     position: relative;
     .shop_count {

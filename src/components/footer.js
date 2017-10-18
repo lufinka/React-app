@@ -1,33 +1,37 @@
 import React, {Component} from 'react'
+import {
+    Link
+} from 'react-router-dom'
+
 const footer = () => {
     return (
         <footer className="footer">
             <ul className="bot_menu_ul">
                 <li>
-                    <a href="index.html" title="">
+                    <Link to="index.html" title="">
                         <span className="nav_ico nav_ico1"></span>
                         <span className="world">首页</span>
-                    </a>
+                    </Link>
                 </li>
                 <li className="on">
-                    <a href="classNameify.html" title="">
+                    <Link to="/classify" title="">
                         <span className="nav_ico nav_ico2"></span>
                         <span className="world">分类</span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="shopcar.html" title="">
+                    <Link to="shopcar.html" title="">
                         <span className="shop_car nav_ico nav_ico3">
                 <i className="shop_count">3</i>
               </span>
                         <span className="world">购物车</span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="user_center.html" title="">
+                    <Link to="user_center.html" title="">
                         <span className="nav_ico nav_ico4"></span>
                         <span className="world">我</span>
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </footer>

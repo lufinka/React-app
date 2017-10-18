@@ -1,13 +1,14 @@
 import React, {Component} from 'react'
 import Footer from '../components/footer'
-import '../style/normalize.css';
 import '../style/classify.css'
 import footer from '../components/footer'
 import axios from 'axios'
 import {
     listCategory
 } from '../server/getDate.js'
-
+import {
+    Link
+} from 'react-router-dom'
 
 export default class classify extends Component {
     constructor(...args) {
@@ -16,7 +17,8 @@ export default class classify extends Component {
             data: {},
             leftContent: [],
             now:0,
-            toggle:!1
+            toggle:!1,
+            keyword:''
         }
     }
 
@@ -33,6 +35,19 @@ export default class classify extends Component {
         });
     };
 
+    //搜索产品
+    setKeyword(e){
+        this.setState({
+            keyword: e.target.value
+        });
+    }
+
+    search(e){
+        if(e.keyCode == 13){
+            this.props.history.push('/result/'+e.target.value)
+        }
+    }
+
     // 获取数据
     componentDidMount() {
         listCategory(axios,'/manage/api/self/listCategory').then((response) => {
@@ -48,10 +63,10 @@ export default class classify extends Component {
     render() {
         var sty = {paddingBottom:'0.4rem'}
         return (
-            <div>
+            <div className="container wrapper web">
                 <header className="header">
                     <div className="search_contaienr">
-                        <a href="/search.html?redirecturl=%2Fclassify.html"><input id="search_input" className="search_input" type="text" placeholder="药品名/拼音缩写/厂家"  /></a>
+                        <input id="search_input" value={this.state.keyword} onChange={this.setKeyword.bind(this)} onKeyDown={this.search.bind(this)} className="search_input" type="search" placeholder="药品名/拼音缩写/厂家"  />
                     </div>
                 </header>
                 <div className="classify">
@@ -84,7 +99,7 @@ export default class classify extends Component {
                                                 <ul style={{maxHeight:this.state.toggle?(Math.ceil(value.cardCategory.length / 3) * 40 + 10) / 37.5 + 'rem':'1.6rem'}}>
                                                     {value.cardCategory.map((item, n) => (
                                                         <li className={ n == 0 ? 'active':''} key={n}>
-                                                            <a href="#{item.categoryCode}">{item.categoryName}</a>
+                                                            <a href={'#'+item.categoryCode}>{item.categoryName}</a>
                                                         </li>
                                                     ))}
                                                 </ul>
@@ -99,17 +114,17 @@ export default class classify extends Component {
                                             <div className="category-wrapper">
                                                 {
                                                     value.secondCategory.map((item, n) => (
-                                                        <dl key={n} name="{item.categoryCode}" id="{item.categoryCode}">
+                                                        <dl key={n} name={item.categoryCode} id={item.categoryCode}>
                                                             <dt>{item.categoryName}</dt>
                                             {item.thirdCategory && item.thirdCategory.length &&
                                                 <div className="cont">
                                                 {
                                                     item.thirdCategory.map((val, m) => (
                                                         <dd key={m}>
-                                                            <a href="/result_product.html?product2ndLMCode={val.categoryCode}">
+                                                            <Link to={{pathname:"/result",search: '?keyword='+item.categoryCode}}>
                                                                 <img src={val.activityPic} alt=""/>
                                                                 <p>{val.categoryName}</p>
-                                                            </a>
+                                                            </Link>
                                                         </dd>
                                                     ))
                                                 }

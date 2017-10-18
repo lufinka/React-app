@@ -185,6 +185,22 @@ body {
   color: #333;
   display: block;
 }
+* {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer */
+  -ktml-user-select: none;
+  /* KHTML浏览器（比如：Konqueror） */
+  -webkit-user-select: none;
+  /* Chrome,Safari,and Opera */
+  -webkit-touch-callout: none;
+  /* Disable Android and IOS callout */
+}
 .btn_back {
   position: absolute;
   top: 0;
@@ -221,24 +237,26 @@ body {
   box-align: center;
   -webkit-align-items: center;
   align-items: center;
-  padding: 0 15px;
-  border-bottom: none;
+  padding: 0 6px;
+  border-bottom: 1px solid #dedddd;
   background-color: #fff;
 }
 .header .search_contaienr {
-  margin-left: 20px;
   position: relative;
 }
 .header input[type="text"],
 .header input[type="search"] {
   border: 0;
 }
+.header a {
+  display: block;
+}
 .header .search_input {
   position: relative;
   padding-left: 30px;
   height: 33px;
   font-size: 15px;
-  width: 245px;
+  width: 100%;
   border-radius: 100px;
   background: url("../images/index/icon_search.png") #F3F3F3 10px center no-repeat;
   background-size: 15px;
@@ -1586,22 +1604,6 @@ input[type="number"] {
 }
 .Boot_download .go_now img {
   width: 100%;
-}
-* {
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer */
-  -ktml-user-select: none;
-  /* KHTML浏览器（比如：Konqueror） */
-  -webkit-user-select: none;
-  /* Chrome,Safari,and Opera */
-  -webkit-touch-callout: none;
-  /* Disable Android and IOS callout */
 }
 .nav_ico3 {
   position: relative;

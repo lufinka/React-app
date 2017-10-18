@@ -58,6 +58,7 @@ var deleteReceiverAddress = (h,p) => post( h, '/usermanage/api/enterpriseInfo/de
 var saveReceiverAddress = (h,p) => post( h,'/usermanage/api/enterpriseInfo/saveReceiverAddress',p); //保存新增收货地址
 var updateReceiverAddress = (h,p) => post( h, '/usermanage/api/enterpriseInfo/updateReceiverAddress',p); //修改收货地址
 var updDefReceiverAddress = (h,p) => post( h, '/usermanage/api/enterpriseInfo/updDefReceiverAddress',p); //设置默认收货地址
+var searchProductList = (h,p) => post( h, '/mall/api/search/searchProductList',p); //设置默认收货地址
 
 export {
     headers,
@@ -85,5 +86,6 @@ export {
     deleteReceiverAddress,
     saveReceiverAddress,
     updateReceiverAddress,
-    updDefReceiverAddress
+    updDefReceiverAddress,
+    searchProductList,
 }

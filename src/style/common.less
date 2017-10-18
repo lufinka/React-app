@@ -117,6 +117,46 @@ body {
     -webkit-@{property}:@value;
         @{property}:@value;
 }
+.transition(@arg){
+    -webkit-transition:@arg;
+    transition:@arg;
+}
+.transition(@arg;@prefix)when(@prefix=true){
+    -webkit-transition:e("-webkit-@{arg}");
+    transition:@arg;
+}
+.clearfix(){
+    &:after{
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+.radius(@x:5px){
+    -webkit-border-radius: @x;
+    border-radius: @x;
+}
+.ellipsis(){
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer */
+    -ktml-user-select: none;
+    /* KHTML浏览器（比如：Konqueror） */
+    -webkit-user-select: none;
+    /* Chrome,Safari,and Opera */
+    -webkit-touch-callout: none;
+    /* Disable Android and IOS callout */
+}
 // row | column | row-reverse
 // 默认值：column
 .flex-direction(@value)when(@value=row){
@@ -345,23 +385,25 @@ body {
     .justify-content(space-between);
     height: 40px;
     .align-items(center);
-    padding: 0 15px;
-    border-bottom: none;
+    padding: 0 6px;
+    border-bottom: 1px solid #dedddd;
     background-color: #fff;
     .search_contaienr {
-        margin-left: 20px;
         position: relative;
     }
     input[type="text"],
     input[type="search"] {
         border: 0;
     }
+    a{
+        display: block;
+    }
     .search_input {
         position: relative;
         padding-left: 30px;
         height: 33px;
         font-size: 15px;
-        width: 245px;
+        width: 100%;
         border-radius: 100px;
         background: url("../images/index/icon_search.png") #F3F3F3 10px center no-repeat;
         background-size: 15px;
