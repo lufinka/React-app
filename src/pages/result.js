@@ -177,7 +177,11 @@ export default class result extends Component {
       </div>,
     ];
   }
-
+    //后退操作
+    goBack(){
+        this.props.history.goBack()
+    }
+    
   render() {
     const separator = (sectionID, rowID) => (
       <div
@@ -219,7 +223,7 @@ export default class result extends Component {
     <div>
     <NavBar leftContent=""
       mode="light"
-      onLeftClick={() => console.log('onLeftClick')}
+      onLeftClick={this.goBack.bind(this)}
     >商品列表</NavBar>
       <ListView
         ref={el => this.lv = el}
