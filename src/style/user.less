@@ -1,0 +1,191 @@
+@import 'common';
+@size : 37.5rem;
+    body {
+        background-color: #f8f8f8;
+    }
+    
+    .user {
+        .top-banner {
+            height: 190/@size;
+            background: url("../images/usercenter/bg_banner.png") center no-repeat;
+            background-size: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .wrapInfo {
+            text-align: center;
+            margin: 30/@size auto;
+        }
+        img {
+            width: 83/@size;
+            height: 83/@size;
+        }
+        .btn_config {
+            width: 104/@size;
+            height: 33/@size;
+            text-align: center;
+            font-size: 13/@size;
+            background: transparent;
+            outline: none;
+            display: block;
+            margin: 16/@size auto 0;
+            color: #fff;
+            border-radius: 5/@size;
+            border: 1px solid #f1f1f1;
+            letter-spacing: 1px;
+            line-height: 2.7;
+        }
+        .username {
+            display: block;
+            margin-top: 6/@size;
+            margin-bottom: 0;
+            font-size: 16/@size;
+            color: #fff;
+        }
+        .enterpriseName {
+            color: #fff;
+            width: 260/@size;
+            font-size: 12/@size;
+            text-align: center;
+            margin: 6/@size auto;
+        }
+        .myOrder {
+            background-color: #fff;
+            width: 100%;
+            .all {
+                border-bottom: 1px solid #ebebeb;
+            }
+            a {
+                padding: 10/@size;
+                display: block;
+                font-size: 15/@size;
+                color: #666;
+                transition: all .218s;
+                display: block;
+                position: relative;
+                span {
+                    position: absolute;
+                    right: 10/@size;
+                    top: 0;
+                    bottom: 0;
+                    display: block;
+                    background-image: url(../images/icon_next_back.png);
+                    background-repeat: no-repeat;
+                    background-position: right center;
+                    background-size: 8/@size auto;
+                    width: 8/@size;
+                    height: 100%;
+                }
+                &:active {
+                    background-color: #f8f8f8;
+                }
+            }
+            .four {
+                width: 100%;
+                text-align: center;
+                overflow: hidden;
+                ul {
+                    display: flex;
+                    li {
+                        flex: 1;
+                        a {
+                            padding: 12/@size 0;
+                            font-size: 14/@size;
+                            color: #333;
+                            position: relative;
+                            h3 {
+                                color: #fe7e7a;
+                                font-size: 16/@size;
+                                padding-bottom: 4/@size;
+                            }
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                right: -1px;
+                                width: 1px;
+                                top: 20/@size;
+                                bottom: 20/@size;
+                                background-color: #ebebeb;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .into-list {
+        margin-top: 6/@size;
+        background-color: #fff;
+        width: 100%;
+        overflow: hidden;
+        li {
+            float: left;
+            width: 100%;
+            position: relative;
+            border-bottom: 1px solid #ebebeb;
+            a {
+                overflow: hidden;
+                padding: 10/@size;
+                display: block;
+                transition: all .218s;
+                vertical-align: middle;
+                i {
+                    float: left;
+                    width: 33/@size;
+                    height: 30/@size;
+                    background-repeat: no-repeat;
+                    background-image: url("../images/usercenter/usercenter_icon.png");
+                    background-size: 282/@size 33/@size;
+                    &.address {
+                        background-position: -125/@size -2/@size
+                    }
+                    &.kf {
+                        background-position: -156/@size 0/@size
+                    }
+                    &.often_list {
+                        background-position: -256/@size 0/@size
+                    }
+                    &.often_shop {
+                        background-position: -226/@size 0/@size
+                    }
+                    &.set {
+                        background-position: -192/@size -2/@size
+                    }
+                }
+                p {
+                    float: left;
+                    line-height: 30/@size;
+                }
+                &:active {
+                    background-color: #f8f8f8;
+                }
+            }
+            span {
+                position: absolute;
+                right: 10/@size;
+                top: 0;
+                bottom: 0;
+                display: block;
+                background-image: url(../images/icon_next_back.png);
+                background-repeat: no-repeat;
+                background-position: right center;
+                background-size: 6/@size auto;
+                width: 6/@size;
+                height: 100%;
+            }
+            &.notice {
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 6/@size;
+                    height: 6/@size;
+                    right: 24/@size;
+                    top: 50%;
+                    margin-top: -3/@size;
+                    border-radius: 6/@size;
+                    background-color: #f00;
+                }
+            }
+        }
+    }

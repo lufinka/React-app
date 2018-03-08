@@ -1606,3 +1606,185 @@ input[type="number"] {
 .Boot_download .go_now img {
   width: 100%;
 }
+body {
+  background-color: #f8f8f8;
+}
+.user .top-banner {
+  height: 5.06666667rem;
+  background: url("../images/usercenter/bg_banner.png") center no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.user .wrapInfo {
+  text-align: center;
+  margin: 0.8rem auto;
+}
+.user img {
+  width: 2.21333333rem;
+  height: 2.21333333rem;
+}
+.user .btn_config {
+  width: 2.77333333rem;
+  height: 0.88rem;
+  text-align: center;
+  font-size: 0.34666667rem;
+  background: transparent;
+  outline: none;
+  display: block;
+  margin: 0.42666667rem auto 0;
+  color: #fff;
+  border-radius: 0.13333333rem;
+  border: 1px solid #f1f1f1;
+  letter-spacing: 1px;
+  line-height: 2.7;
+}
+.user .username {
+  display: block;
+  margin-top: 0.16rem;
+  margin-bottom: 0;
+  font-size: 0.42666667rem;
+  color: #fff;
+}
+.user .enterpriseName {
+  color: #fff;
+  width: 6.93333333rem;
+  font-size: 0.32rem;
+  text-align: center;
+  margin: 0.16rem auto;
+}
+.user .myOrder {
+  background-color: #fff;
+  width: 100%;
+}
+.user .myOrder .all {
+  border-bottom: 1px solid #ebebeb;
+}
+.user .myOrder a {
+  padding: 0.26666667rem;
+  font-size: 0.4rem;
+  color: #666;
+  transition: all .218s;
+  display: block;
+  position: relative;
+}
+.user .myOrder a span {
+  position: absolute;
+  right: 0.26666667rem;
+  top: 0;
+  bottom: 0;
+  display: block;
+  background-image: url(../images/icon_next_back.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 0.21333333rem auto;
+  width: 0.21333333rem;
+  height: 100%;
+}
+.user .myOrder a:active {
+  background-color: #f8f8f8;
+}
+.user .myOrder .four {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.user .myOrder .four ul {
+  display: flex;
+}
+.user .myOrder .four ul li {
+  flex: 1;
+}
+.user .myOrder .four ul li a {
+  padding: 0.32rem 0;
+  font-size: 0.37333333rem;
+  color: #333;
+  position: relative;
+}
+.user .myOrder .four ul li a h3 {
+  color: #fe7e7a;
+  font-size: 0.42666667rem;
+  padding-bottom: 0.10666667rem;
+}
+.user .myOrder .four ul li a:before {
+  content: "";
+  position: absolute;
+  right: -1px;
+  width: 1px;
+  top: 0.53333333rem;
+  bottom: 0.53333333rem;
+  background-color: #ebebeb;
+}
+.into-list {
+  margin-top: 0.16rem;
+  background-color: #fff;
+  width: 100%;
+  overflow: hidden;
+}
+.into-list li {
+  float: left;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #ebebeb;
+}
+.into-list li a {
+  overflow: hidden;
+  padding: 0.26666667rem;
+  display: block;
+  transition: all .218s;
+  vertical-align: middle;
+}
+.into-list li a i {
+  float: left;
+  width: 0.88rem;
+  height: 0.8rem;
+  background-repeat: no-repeat;
+  background-image: url("../images/usercenter/usercenter_icon.png");
+  background-size: 7.52rem 0.88rem;
+}
+.into-list li a i.address {
+  background-position: -3.33333333rem -0.05333333rem;
+}
+.into-list li a i.kf {
+  background-position: -4.16rem 0rem;
+}
+.into-list li a i.often_list {
+  background-position: -6.82666667rem 0rem;
+}
+.into-list li a i.often_shop {
+  background-position: -6.02666667rem 0rem;
+}
+.into-list li a i.set {
+  background-position: -5.12rem -0.05333333rem;
+}
+.into-list li a p {
+  float: left;
+  line-height: 0.8rem;
+}
+.into-list li a:active {
+  background-color: #f8f8f8;
+}
+.into-list li span {
+  position: absolute;
+  right: 0.26666667rem;
+  top: 0;
+  bottom: 0;
+  display: block;
+  background-image: url(../images/icon_next_back.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 0.16rem auto;
+  width: 0.16rem;
+  height: 100%;
+}
+.into-list li.notice:before {
+  content: "";
+  position: absolute;
+  width: 0.16rem;
+  height: 0.16rem;
+  right: 0.64rem;
+  top: 50%;
+  margin-top: -0.08rem;
+  border-radius: 0.16rem;
+  background-color: #f00;
+}

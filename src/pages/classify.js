@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import Footer from '../components/footer'
 import '../style/classify.css'
-import footer from '../components/footer'
 import axios from 'axios'
 import {
     listCategory
@@ -50,7 +49,7 @@ export default class classify extends Component {
 
     // 获取数据
     componentDidMount() {
-        listCategory(axios,'/manage/api/self/listCategory').then((response) => {
+        listCategory(axios).then((response) => {
             console.log(response)
             this.setState({
                 data: response.data.data
@@ -142,7 +141,7 @@ export default class classify extends Component {
                  </div>
                 }
                 </div>
-                <Footer></Footer>
+                <Footer focus="1"></Footer>
             </div>
         )
     }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Button from 'antd-mobile/lib/button'
+import { Button } from 'antd-mobile';
 
 var sty = {
   color: 'red',

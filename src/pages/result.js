@@ -221,10 +221,7 @@ export default class result extends Component {
     };
     return (
     <div>
-    <NavBar leftContent=""
-      mode="light"
-      onLeftClick={this.goBack.bind(this)}
-    >商品列表</NavBar>
+    <NavBar leftContent="" mode="light" onLeftClick={this.goBack.bind(this)}>商品列表</NavBar>
       <ListView
         ref={el => this.lv = el}
         dataSource={this.state.dataSource}

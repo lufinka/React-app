@@ -2,6 +2,7 @@
     var docEl = doc.documentElement,
         resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
         recalc = function () {
+            console.log(1111,docEl.clientWidth,window.innerWidth)
             var clientWidth = docEl.clientWidth > 640 ? 640 : docEl.clientWidth;
             if (!clientWidth) return;
             docEl.style.fontSize = clientWidth / 10 + 'px';
