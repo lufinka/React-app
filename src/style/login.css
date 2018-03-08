@@ -13,29 +13,29 @@ textarea:focus {
   position: absolute;
   right: 0;
   height: 13px;
-  border: 0.26666667rem solid transparent;
+  border: 10px solid transparent;
   background-image: url("../images/icon_paw_show.png");
   background-position: center;
-  background-size: 0.50666667rem auto;
+  background-size: 19px auto;
   background-repeat: no-repeat;
 }
 .btn_look.look_hide {
   background-image: url("../images/icon_paw_hide.png");
 }
 .forget_password {
-  margin-top: 0.33333333rem;
-  margin-bottom: 0.54666667rem;
+  margin-top: 12.5px;
+  margin-bottom: 20.5px;
   text-align: right;
-  height: 0.34666667rem;
+  height: 13px;
 }
 .forget_password a {
-  font-size: 0.32rem;
+  font-size: 12px;
   color: #999;
 }
 .forget_password .login_error {
   display: none;
   float: left;
-  font-size: 0.34666667rem;
+  font-size: 13px;
   color: #fe443b;
 }
 .active {
@@ -48,13 +48,13 @@ textarea:focus {
   color: #ccc;
   font-size: 18px;
   border: 1px solid #F84A73;
-  border-radius: 0.05333333rem;
+  border-radius: 2px;
 }
 .btn_next_ok {
   padding: 10px;
   background-image: linear-gradient(-180deg, #f84a73 0%, #ff3c4c 100%);
   color: #fff;
-  border-radius: 0.05333333rem;
+  border-radius: 2px;
 }
 .login_container {
   margin: 0 auto;
@@ -87,16 +87,16 @@ textarea:focus {
   letter-spacing: 8px;
 }
 .login_container .btn_next1 {
-  letter-spacing: 0.05333333rem;
+  letter-spacing: 2px;
 }
 .login_container .btn_look {
-  top: 0.56rem;
+  top: 21px;
 }
 .login_container .btn_submit {
   margin-top: 27px;
 }
 .login_container .btn_register {
-  margin-top: 0.4rem;
+  margin-top: 15px;
   color: #fe403b;
 }
 .login_container .show_password {
@@ -104,9 +104,9 @@ textarea:focus {
   top: 0;
   left: 0;
   margin: 0;
-  padding: 0.74666667rem 0.5rem;
+  padding: 28px .5rem;
   color: #cccccc;
-  font-size: 0.34666667rem;
+  font-size: 13px;
 }
 .login_container .ibtn {
   position: absolute;
@@ -120,8 +120,8 @@ textarea:focus {
   border: none;
 }
 .cleari {
-  width: 0.50666667rem;
-  height: 0.34666667rem;
+  width: 19px;
+  height: 13px;
   background: url("../images/icon_delete.png") center / contain no-repeat;
 }
 .logo {

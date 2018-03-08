@@ -4,7 +4,6 @@ import {
     getLocalStorage
 } from '../server/tool.js'
 import axios from 'axios'
-import rem from '../server/rem.js'
 import '../style/user.css'
 import {
     getUserTipInfo
