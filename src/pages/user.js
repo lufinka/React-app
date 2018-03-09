@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Footer from '../components/footer';
+import React,{ Component } from 'react'
+import Footer from '../components/footer'
 import {
     getLocalStorage
 } from '../server/tool.js'
@@ -12,6 +12,7 @@ import user_header from '../images/usercenter/user_header.png';
 import {
     Link
 } from 'react-router-dom'
+    console.log(getUserTipInfo)
 export default class user extends Component{
     constructor(...args){
         super(...args);
@@ -42,11 +43,12 @@ export default class user extends Component{
             <section className="top-banner">
                 <div className="wrapInfo">
                     <img src={user_header} alt="" />
-        {this.state.token ?
+        {!this.state.token &&
                     <div>
                         <Link to="/login" className="btn_config">登录/注册</Link>
                     </div>
-        :
+         }
+        {this.state.token &&
         <div>
                     <div className="username">{this.state.nick}</div>
                     <div className="enterpriseName">{this.state.enterpriseName}</div>

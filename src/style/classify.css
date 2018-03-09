@@ -255,7 +255,7 @@ body {
 .header .search_input {
   position: relative;
   padding-left: 30px;
-  height: 33px;
+  height: 0.88rem;
   font-size: 15px;
   width: 100%;
   border-radius: 100px;
@@ -1591,7 +1591,7 @@ input[type="number"] {
 }
 .Boot_download .word_content {
   color: white;
-  margin: 0 54px 0 10px ;
+  margin: 0 54px 0 10px;
 }
 .Boot_download .word_content h1 {
   font-size: 15px;
@@ -1605,6 +1605,32 @@ input[type="number"] {
 }
 .Boot_download .go_now img {
   width: 100%;
+}
+header {
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+header:after {
+  content: attr(data-title);
+  position: absolute;
+  top: 0;
+  left: 1.46666667rem;
+  right: 1.46666667rem;
+  height: 100%;
+  font-weight: normal;
+  font-size: 0.42666667rem;
+}
+.head_goback {
+  padding-top: 0.21333333rem;
+  left: 0.4rem;
+  width: 1.06666667rem;
+  height: 100%;
+  line-height: 100%;
+  margin-left: .4rem;
 }
 .nav_ico3 {
   position: relative;
@@ -1637,6 +1663,7 @@ input[type="number"] {
   display: block;
 }
 .header .search_input {
+  height: 100%;
   width: 100%;
 }
 .footer {

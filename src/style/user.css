@@ -1591,7 +1591,7 @@ input[type="number"] {
 }
 .Boot_download .word_content {
   color: white;
-  margin: 0 54px 0 10px ;
+  margin: 0 54px 0 10px;
 }
 .Boot_download .word_content h1 {
   font-size: 15px;
@@ -1605,6 +1605,32 @@ input[type="number"] {
 }
 .Boot_download .go_now img {
   width: 100%;
+}
+header {
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+header:after {
+  content: attr(data-title);
+  position: absolute;
+  top: 0;
+  left: 1.46666667rem;
+  right: 1.46666667rem;
+  height: 100%;
+  font-weight: normal;
+  font-size: 0.42666667rem;
+}
+.head_goback {
+  padding-top: 0.21333333rem;
+  left: 0.4rem;
+  width: 1.06666667rem;
+  height: 100%;
+  line-height: 100%;
+  margin-left: .4rem;
 }
 body {
   background-color: #f8f8f8;
@@ -1788,4 +1814,44 @@ body {
   margin-top: -3px;
   border-radius: 6px;
   background-color: #f00;
+}
+.aboutus {
+  position: relative;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  color: #333;
+}
+.aboutus a {
+  display: block;
+  padding: 12px 10px;
+  background-color: #fff;
+  transition: all .1s;
+}
+.aboutus a:actived {
+  background-color: #f8f8f8;
+}
+.aboutus span {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  display: block;
+  background-image: url(../images/icon_next_back.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 6px auto;
+  width: 6px;
+  height: 100%;
+}
+.signOut {
+  width: 100%;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+.signOut button {
+  width: 100%;
+  background-image: linear-gradient(-180deg, #f84a73 0%, #ff3c4c 100%);
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 2px;
 }
