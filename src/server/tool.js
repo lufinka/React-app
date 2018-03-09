@@ -26,7 +26,7 @@ const getLocationParam = function () {
     var url = window.location.search;
     var params = url.toString().slice(1).split("&");
     var returnObject = {};
-    for (var i = 0; i != params.length; i++) {
+    for (var i = 0; i !== params.length; i++) {
         var index = params[i].indexOf("=");
         returnObject[params[i].slice(0, index)] = params[i].slice(index + 1);
     }
@@ -52,7 +52,7 @@ const getParam = function (url) {
     var params = url ? url.toString().split("&") : [];
     var returnObject = {};
 
-    for (var i = 0; i != params.length; i++) {
+    for (var i = 0; i !== params.length; i++) {
         var canshu = params[i].split("=");
         returnObject[canshu[0]] = canshu[1];
     }
@@ -69,7 +69,7 @@ const getURIParams = function (url) {
     var params = url ? url.toString().substring(paramsBegin + 1, url.length).split("&") : [];
     var returnObject = {};
 
-    for (var i = 0; i != params.length; i++) {
+    for (var i = 0; i !== params.length; i++) {
         var canshu = params[i].split("=");
         returnObject[canshu[0]] = canshu[1];
     }
@@ -102,7 +102,7 @@ const doCallback = function (callback, response) {
     if (!callback) return;
     var callbackFunc = callback.func,
         callbackContext = callback.context;
-    callbackFunc && typeof (callbackFunc) == 'function' && callbackFunc.call(callbackContext, response.data);
+    callbackFunc && typeof (callbackFunc) === 'function' && callbackFunc.call(callbackContext, response.data);
 }
 //函数节流
 const throttle = function (method, context, time) {

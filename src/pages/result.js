@@ -2,7 +2,6 @@ import React, {
     Component
 } from 'react'
 import ReactDOM from 'react-dom';
-import Footer from '../components/footer'
 import '../style/normalize.css';
 import '../style/result.css'
 import axios from 'axios'
@@ -10,17 +9,11 @@ import {
     searchProductList
 } from '../server/getDate.js'
 import {
-    Link
-} from 'react-router-dom'
-
-import {
     getURIParams
 } from '../server/tool.js'
 
 import {
-    Button,
     NavBar,
-    Icon,
     RefreshControl,
     ListView
 } from 'antd-mobile';

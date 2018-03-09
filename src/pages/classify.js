@@ -42,7 +42,7 @@ export default class classify extends Component {
     }
 
     search(e){
-        if(e.keyCode == 13){
+        if(e.keyCode === 13){
             this.props.history.push('/result/'+e.target.value)
         }
     }
@@ -60,7 +60,6 @@ export default class classify extends Component {
     }
 
     render() {
-        var sty = {paddingBottom:'0.4rem'}
         return (
             <div className="container wrapper web">
                 <header className="header">
@@ -77,7 +76,7 @@ export default class classify extends Component {
                                     <i className="strip" style={{top:this.state.now * 1.24 + 'rem'}}></i>
                                     <ul>
                                         {this.state.data.category.map((item, index) => (
-                                            <li onClick={this.tabs.bind(this,index)} key={index} className={this.state.now == index ? 'active' : ''}>{item.categoryName}</li>
+                                            <li onClick={this.tabs.bind(this,index)} key={index} className={this.state.now === index ? 'active' : ''}>{item.categoryName}</li>
                                         ))}
                                     </ul>
                                 </div>
@@ -85,7 +84,7 @@ export default class classify extends Component {
                             <div className="classify-right">
                             {
                                 this.state.data.category.map((value, i) => (
-                                    <div key={i} className={this.state.now == i ? 'classify-content animated ui_verscrollpl active' : 'classify-content animated ui_verscrollpl'}>
+                                    <div key={i} className={this.state.now === i ? 'classify-content animated ui_verscrollpl active' : 'classify-content animated ui_verscrollpl'}>
                                         <div className="classify-wrapper">
 
                                             {value.activityPic&&
@@ -93,11 +92,11 @@ export default class classify extends Component {
                                                 <a><img src={value.activityPic} alt="" /></a>
                                             </div>
                                             }
-                                            {value.showCard == 0 && value.cardCategory && value.cardCategory.length&&
+                                            {value.showCard === 0 && value.cardCategory && value.cardCategory.length&&
                                             <div className="category" style={{paddingBottom:value.cardCategory.length>6?'0.4rem':'10px'}}>
                                                 <ul style={{maxHeight:this.state.toggle?(Math.ceil(value.cardCategory.length / 3) * 40 + 10) / 37.5 + 'rem':'1.6rem'}}>
                                                     {value.cardCategory.map((item, n) => (
-                                                        <li className={ n == 0 ? 'active':''} key={n}>
+                                                        <li className={ n === 0 ? 'active':''} key={n}>
                                                             <a href={'#'+item.categoryCode}>{item.categoryName}</a>
                                                         </li>
                                                     ))}

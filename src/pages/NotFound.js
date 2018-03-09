@@ -5,7 +5,7 @@ export default class fzf extends Component {
     return (
       <div className='not_found'>
         <p>404</p>
-        <img src="../image/404.png"/>
+        <img alt="" src="../image/404.png"/>
       </div>
     )
   }

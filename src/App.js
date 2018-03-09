@@ -2,28 +2,23 @@ import React, { Component } from 'react';
 import logo from './images/logo.png';
 import './style/login.css';
 import './style/normalize.css';
-import { Button ,NavBar, Icon } from 'antd-mobile';
+import { Button ,NavBar } from 'antd-mobile';
 import axios from 'axios'
 import {
-    headers,
-    userLogin
+    headers
 } from './server/getDate.js'
 import {
     setLocalStorage
 } from './server/tool.js'
 import { createStore } from 'redux'
 import {
-    BrowserRouter as Router,
-    Route,
-    Link,
-    Redirect,
-    Switch
+    Link
 } from 'react-router-dom'
 
 function counter(state = 0, action) {
-    if(action.type == 'INCREMENT'){
+    if(action.type === 'INCREMENT'){
         return state + 1;
-    }else if(action.type == 'DECREMENT'){
+    }else if(action.type === 'DECREMENT'){
         return state + 11;
     }else{
         return state;
@@ -67,8 +62,7 @@ class App extends Component {
                 }
             ).then((response) => {
                 var data = response.data.data;
-                var self = this;
-                if (data.result == 0) {
+                if (data.result === 0) {
                     setLocalStorage('city_name', data.stationName);
                     setLocalStorage('city_id', data.station);
                     setLocalStorage('token', data.token);
@@ -104,10 +98,10 @@ class App extends Component {
     };
     setType(ev) {
         this.setState({
-            itype: this.state.itype == "password" ? "text" : "password"
+            itype: this.state.itype === "password" ? "text" : "password"
         }, () => {
             this.setState({
-                btn_state: this.state.itype == "password" ? "btn_look look_hide" : "btn_look"
+                btn_state: this.state.itype === "password" ? "btn_look look_hide" : "btn_look"
             });
         });
     }
@@ -127,7 +121,7 @@ class App extends Component {
                     </div>
                     <div className="afterLine">
                         <input type={this.state.itype} defaultValue={this.state.password} name="password" className="input_password" placeholder="密码" />
-                        <i className={'ibtn'+' '+this.state.btn_state} onClick={this.setType.bind(this)}></i>
+                        <i className={'ibtn '+this.state.btn_state} onClick={this.setType.bind(this)}></i>
                     </div>
                     <p className="forget_password">
                         <span className="login_error">用户名或者密码错误，请重试</span>
